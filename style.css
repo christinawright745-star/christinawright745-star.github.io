@@ -1,0 +1,369 @@
+/* =========================================================
+   Christina Wright — Portfolio
+   Shared stylesheet for all pages
+   ========================================================= */
+
+:root {
+  --cream: #F6F1E7;
+  --cream-deep: #EFE7D6;
+  --navy: #22344A;
+  --navy-soft: #3A4E68;
+  --dusty-blue: #8CA9BE;
+  --peach: #E7A97E;
+  --charcoal: #2B2B28;
+
+  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+
+  --max-width: 1080px;
+  --edge-padding: 1.5rem;
+}
+
+/* ---------- Reset ---------- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--charcoal);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+h1, h2, h3 {
+  font-family: var(--serif);
+  color: var(--navy);
+  line-height: 1.15;
+  margin: 0 0 0.5em 0;
+}
+
+p {
+  margin: 0 0 1em 0;
+  max-width: 68ch;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Layout helpers ---------- */
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--edge-padding);
+}
+
+section {
+  padding: 4rem 0;
+}
+
+/* ---------- Header / Nav ---------- */
+.site-header {
+  border-bottom: 1px solid var(--cream-deep);
+  background: var(--cream);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.1rem;
+  padding-bottom: 1.1rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.site-title {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.6rem;
+  list-style: none;
+}
+
+.site-nav a {
+  text-decoration: none;
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: var(--navy);
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.15s ease;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible,
+.site-nav a.active {
+  border-bottom-color: var(--peach);
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  padding: 0.75rem 1.4rem;
+  border-radius: 3px;
+  border: 2px solid var(--navy);
+  transition: transform 0.12s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--navy);
+  color: var(--cream);
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background: var(--navy-soft);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--navy);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+  background: var(--navy);
+  color: var(--cream);
+  transform: translateY(-1px);
+}
+
+.btn-row {
+  display: flex;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+  margin-top: 1.6rem;
+}
+
+/* ---------- Hero (homepage) ---------- */
+.hero {
+  padding: 5rem 0 4rem 0;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  max-width: 14ch;
+}
+
+.hero p.lede {
+  font-size: 1.15rem;
+  max-width: 52ch;
+  color: var(--navy-soft);
+}
+
+/* ---------- Section headings ---------- */
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.section-heading h2 {
+  font-size: 1.9rem;
+}
+
+.section-heading .rule {
+  flex: 1;
+  height: 1px;
+  background: var(--cream-deep);
+}
+
+/* ---------- Project cards (homepage) ---------- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+}
+
+.project-card {
+  border: 1.5px solid var(--navy);
+  background: var(--cream);
+  text-decoration: none;
+  color: var(--charcoal);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s ease;
+}
+
+.project-card:hover,
+.project-card:focus-visible {
+  transform: translateY(-3px);
+}
+
+.project-card .thumb {
+  aspect-ratio: 4 / 3;
+  background: var(--cream-deep);
+  border-bottom: 1.5px solid var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0.75rem;
+}
+
+.project-card .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.thumb-placeholder {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--navy-soft);
+  text-align: center;
+  padding: 1rem;
+}
+
+.project-card .card-body {
+  padding: 1.4rem;
+}
+
+.project-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--navy);
+  background: var(--dusty-blue);
+  padding: 0.2rem 0.6rem;
+  border-radius: 2px;
+  margin-bottom: 0.7rem;
+}
+
+.tag.peach {
+  background: var(--peach);
+}
+
+/* ---------- About / bio blocks ---------- */
+.about-block {
+  max-width: 68ch;
+}
+
+.about-block p {
+  font-size: 1.05rem;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  border-top: 1px solid var(--cream-deep);
+  padding: 2.5rem 0;
+  margin-top: 2rem;
+}
+
+.site-footer .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.4rem;
+  list-style: none;
+  font-size: 0.92rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--navy-soft);
+}
+
+.footer-links a:hover {
+  color: var(--navy);
+}
+
+.footer-note {
+  font-size: 0.88rem;
+  color: var(--navy-soft);
+}
+
+/* ---------- Image placeholder box (used across pages) ---------- */
+.image-placeholder {
+  border: 1.5px dashed var(--dusty-blue);
+  background: var(--cream-deep);
+  color: var(--navy-soft);
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  border-radius: 3px;
+}
+
+/* ---------- Accessibility ---------- */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--peach);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 720px) {
+  section {
+    padding: 2.75rem 0;
+  }
+
+  .site-header .wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-nav {
+    gap: 1.1rem;
+    flex-wrap: wrap;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 3rem 0 2.5rem 0;
+  }
+}

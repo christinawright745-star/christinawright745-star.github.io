@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Christina Wright</title>
+<meta name="description" content="Get in touch with Christina Wright.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+    max-width: 640px;
+  }
+  .contact-card {
+    border: 1.5px solid var(--navy);
+    padding: 1.6rem;
+    text-decoration: none;
+    color: var(--charcoal);
+    display: block;
+    transition: transform 0.12s ease;
+  }
+  .contact-card:hover,
+  .contact-card:focus-visible {
+    transform: translateY(-3px);
+  }
+  .contact-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.35rem;
+  }
+  .contact-card p {
+    font-size: 0.92rem;
+    color: var(--navy-soft);
+    margin-bottom: 0;
+  }
+  @media (max-width: 720px) {
+    .contact-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="site-title">Christina Wright</a>
+    <ul class="site-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="index.html#work">Work</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="padding-bottom: 1rem;">
+    <div class="wrap">
+      <h1 style="font-size: clamp(2rem, 4vw, 2.8rem);">Let's Connect</h1>
+      <p class="lede">
+        I'd love to hear from you — whether it's about an opportunity, a question about my work,
+        or just to connect. Reach out through whichever works best for you.
+      </p>
+
+      <div class="contact-grid">
+        <a href="mailto:christinawright745@gmail.com" class="contact-card">
+          <h3>Email</h3>
+          <p>christinawright745@gmail.com</p>
+        </a>
+        <a href="https://www.linkedin.com/in/christina-wright" class="contact-card" target="_blank" rel="noopener">
+          <h3>LinkedIn</h3>
+          <p>linkedin.com/in/christina-wright</p>
+        </a>
+      </div>
+
+      <div class="btn-row">
+        <a href="resume.html" class="btn btn-secondary">View My Resume</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="footer-note">Christina Wright · Lawrence, Kansas · christinawright745@gmail.com</p>
+    <ul class="footer-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://www.linkedin.com/in/christina-wright" target="_blank" rel="noopener">LinkedIn</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>

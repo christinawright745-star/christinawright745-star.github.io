@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fresh Step — Christina Wright</title>
+<meta name="description" content="Fresh Step — a shoe-washing machine pitch and cost-volume-profit analysis by Christina Wright.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .project-hero-media {
+    margin-top: 2rem;
+    border: 1.5px solid var(--navy);
+    max-width: 420px;
+  }
+  .project-hero-media img { width: 100%; display: block; }
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.1rem;
+    margin: 1.75rem 0;
+  }
+  .stat-box {
+    border: 1.5px solid var(--navy);
+    padding: 1rem 1.1rem;
+  }
+  .stat-box .num {
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    color: var(--navy);
+    display: block;
+  }
+  .stat-box .label {
+    font-size: 0.82rem;
+    color: var(--navy-soft);
+  }
+  figure { margin: 0; }
+  figcaption {
+    font-size: 0.85rem;
+    color: var(--navy-soft);
+    margin-top: 0.5rem;
+  }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+  }
+  .compare-table th, .compare-table td {
+    text-align: left;
+    padding: 0.6rem 0.8rem;
+    border-bottom: 1px solid var(--cream-deep);
+  }
+  .compare-table th {
+    color: var(--navy);
+    font-weight: 600;
+  }
+  @media (max-width: 720px) {
+    .two-col { grid-template-columns: 1fr; }
+    .stat-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="site-title">Christina Wright</a>
+    <ul class="site-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="index.html#work">Work</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="padding-bottom: 1rem;">
+    <div class="wrap">
+      <span class="tag peach">Cost & Pricing Analysis</span>
+      <h1 style="font-size: clamp(2.1rem, 4.5vw, 3.2rem);">Fresh Step</h1>
+      <p class="lede">
+        A Shark Tank-style class project: pitch a product, then back it up with a full cost,
+        pricing, and break-even analysis. My team's product was a portable shoe-washing machine.
+      </p>
+
+      <figure class="project-hero-media">
+        <img src="images/fresh-step/fresh-step-graphic.png" alt="Fresh Step product graphic — a portable shoe washing machine priced at $150">
+      </figure>
+    </div>
+  </section>
+
+  <section style="padding-top: 0.5rem;">
+    <div class="wrap">
+      <div class="two-col">
+        <div>
+          <div class="section-heading">
+            <h2>What It Was</h2>
+            <div class="rule"></div>
+          </div>
+          <p>
+            For this class project, my team pitched a fictional product — Fresh Step, a portable
+            washer and dryer built specifically for shoes — and then had to prove the idea could
+            actually work as a business. That meant writing an executive summary, product and
+            marketing sections, and an operations plan, then building a full cost worksheet:
+            variable material costs, variable labor costs, fixed costs, contribution margin, a
+            break-even calculation, and a CVP (cost-volume-profit) graph.
+          </p>
+        </div>
+
+        <div>
+          <div class="section-heading">
+            <h2>What I Want You to Notice</h2>
+            <div class="rule"></div>
+          </div>
+          <p>
+            I want the numbers and the analysis to speak louder than the graphic here. This project
+            shows I can go beyond the marketing pitch and actually build out real pricing and
+            break-even math — the kind of financial thinking a marketing hire also needs to be
+            useful in the room.
+          </p>
+          <p>
+            <strong>What I'd do differently:</strong> we'd market Fresh Step to a wider group of
+            people. Our plan leaned on a fairly narrow target customer — I'd broaden that reach.
+          </p>
+        </div>
+      </div>
+
+      <div class="section-heading" style="margin-top: 3rem;">
+        <h2>The Cost & Pricing Breakdown</h2>
+        <div class="rule"></div>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-box">
+          <span class="num">$150</span>
+          <span class="label">Sales price per unit</span>
+        </div>
+        <div class="stat-box">
+          <span class="num">$74.25</span>
+          <span class="label">Total variable cost per unit</span>
+        </div>
+        <div class="stat-box">
+          <span class="num">$75.75</span>
+          <span class="label">Contribution margin per unit</span>
+        </div>
+        <div class="stat-box">
+          <span class="num">19 units</span>
+          <span class="label">Break-even point per month</span>
+        </div>
+      </div>
+
+      <p style="max-width: 68ch;">
+        Fixed costs ran $1,450 a month — rent, utilities, insurance, and equipment. With a
+        contribution margin of $75.75 per unit, Fresh Step would need to sell about 19 units a
+        month just to break even, or roughly $2,871 in monthly revenue.
+      </p>
+
+      <figure style="margin-top: 1.5rem; max-width: 700px;">
+        <img src="images/fresh-step/fresh-step-cvp-chart.png" alt="Cost-volume-profit chart showing revenue, total cost, and fixed cost lines crossing at the break-even point of 19 units" style="border: 1.5px solid var(--navy);">
+        <figcaption>Cost-volume-profit chart, built from our team's cost worksheet — revenue and cost lines cross at the break-even point.</figcaption>
+      </figure>
+
+      <div class="section-heading" style="margin-top: 3rem;">
+        <h2>Market & Competition</h2>
+        <div class="rule"></div>
+      </div>
+      <p style="max-width: 68ch;">
+        We positioned Fresh Step for younger consumers who care about keeping sneakers clean without
+        the cost of replacing them — with potential markets in homes, college dorms, sports team
+        locker rooms, and hotels.
+      </p>
+      <table class="compare-table">
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>How Fresh Step compares</th>
+        </tr>
+        <tr>
+          <td>Fresh Step</td>
+          <td>$150</td>
+          <td>Our product</td>
+        </tr>
+        <tr>
+          <td>Life Changing Products — Shoe Washer</td>
+          <td>$350</td>
+          <td>$200 more for a comparable machine</td>
+        </tr>
+        <tr>
+          <td>Walmart — Shoe Washing Bag</td>
+          <td>$15.99</td>
+          <td>Cheaper, but risks damaging shoes when thrown in a regular washer</td>
+        </tr>
+      </table>
+
+      <div class="btn-row">
+        <a href="fanatic-scent.html" class="btn btn-secondary">← Previous Project: Fanatic Scent Co.</a>
+        <a href="index.html#work" class="btn btn-secondary">Back to All Work</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="footer-note">Christina Wright · Lawrence, Kansas · christinawright745@gmail.com</p>
+    <ul class="footer-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://www.linkedin.com/in/christina-wright" target="_blank" rel="noopener">LinkedIn</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>
